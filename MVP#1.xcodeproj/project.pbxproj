@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D202BB4C2742DE0F00DA1F96 /* ViewOutputViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202BB4B2742DE0F00DA1F96 /* ViewOutputViewDelegate.swift */; };
 		D25046532742BFD1003C6CAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25046522742BFD1003C6CAD /* AppDelegate.swift */; };
 		D25046552742BFD1003C6CAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25046542742BFD1003C6CAD /* SceneDelegate.swift */; };
 		D25046572742BFD1003C6CAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25046562742BFD1003C6CAD /* ViewController.swift */; };
 		D250465A2742BFD1003C6CAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25046582742BFD1003C6CAD /* Main.storyboard */; };
 		D250465C2742BFE0003C6CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D250465B2742BFE0003C6CAD /* Assets.xcassets */; };
 		D250465F2742BFE0003C6CAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D250465D2742BFE0003C6CAD /* LaunchScreen.storyboard */; };
+		D25046812742D488003C6CAD /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25046802742D488003C6CAD /* Crypto.swift */; };
+		D25046862742D60C003C6CAD /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25046852742D60C003C6CAD /* Presenter.swift */; };
+		D25046892742D726003C6CAD /* ViewInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25046882742D726003C6CAD /* ViewInputDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D202BB4B2742DE0F00DA1F96 /* ViewOutputViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOutputViewDelegate.swift; sourceTree = "<group>"; };
 		D250464F2742BFD1003C6CAD /* MVP#1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP#1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25046522742BFD1003C6CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D25046542742BFD1003C6CAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		D250465B2742BFE0003C6CAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D250465E2742BFE0003C6CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D25046602742BFE0003C6CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25046802742D488003C6CAD /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		D25046852742D60C003C6CAD /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		D25046882742D726003C6CAD /* ViewInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInputDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		D25046512742BFD1003C6CAD /* MVP#1 */ = {
 			isa = PBXGroup;
 			children = (
-				D25046522742BFD1003C6CAD /* AppDelegate.swift */,
-				D25046542742BFD1003C6CAD /* SceneDelegate.swift */,
-				D25046562742BFD1003C6CAD /* ViewController.swift */,
+				D250467D2742D407003C6CAD /* App */,
+				D25046752742CBC4003C6CAD /* Presenters */,
+				D25046742742CBB4003C6CAD /* Views */,
+				D250467F2742D425003C6CAD /* Models */,
 				D25046582742BFD1003C6CAD /* Main.storyboard */,
 				D250465B2742BFE0003C6CAD /* Assets.xcassets */,
 				D250465D2742BFE0003C6CAD /* LaunchScreen.storyboard */,
 				D25046602742BFE0003C6CAD /* Info.plist */,
 			);
 			path = "MVP#1";
+			sourceTree = "<group>";
+		};
+		D25046742742CBB4003C6CAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D25046562742BFD1003C6CAD /* ViewController.swift */,
+				D25046882742D726003C6CAD /* ViewInputDelegate.swift */,
+				D202BB4B2742DE0F00DA1F96 /* ViewOutputViewDelegate.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D25046752742CBC4003C6CAD /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				D25046852742D60C003C6CAD /* Presenter.swift */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
+		D250467D2742D407003C6CAD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D25046522742BFD1003C6CAD /* AppDelegate.swift */,
+				D25046542742BFD1003C6CAD /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D250467F2742D425003C6CAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D25046802742D488003C6CAD /* Crypto.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D25046892742D726003C6CAD /* ViewInputDelegate.swift in Sources */,
 				D25046572742BFD1003C6CAD /* ViewController.swift in Sources */,
+				D25046812742D488003C6CAD /* Crypto.swift in Sources */,
 				D25046532742BFD1003C6CAD /* AppDelegate.swift in Sources */,
+				D25046862742D60C003C6CAD /* Presenter.swift in Sources */,
+				D202BB4C2742DE0F00DA1F96 /* ViewOutputViewDelegate.swift in Sources */,
 				D25046552742BFD1003C6CAD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
